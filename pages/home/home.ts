@@ -30,6 +30,10 @@ export class HomePage implements OnInit {
       )
     })
   }
+
+  ionViewDidEnter() {
+    this.imcForm.controls.name.setValue(localStorage.getItem('nome'));
+  }
   saveData() {
     if (this.imcForm.controls.height.value > 3) {
       this.imc = 'Insira uma altura válida'

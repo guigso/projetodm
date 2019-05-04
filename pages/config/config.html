@@ -1,0 +1,19 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Configurações de Conta</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card style="height:500px" padding *ngIf="!hasName">
+		<ion-card-header>
+			Alterar nome configurado
+		</ion-card-header>
+		<ion-item>
+			<ion-label>Nome</ion-label>
+			<ion-input [(ngModel)]="nome">
+			</ion-input>
+		</ion-item>
+		<button ion-button (click)="confirmName()">Enviar</button>
+</ion-card>
+</ion-content>

@@ -1,4 +1,4 @@
-<ion-card style="height:500px" padding>
+<ion-card style="height:500px" padding *ngIf="!hasName">
 	<ion-card-title>
 		Bem vindo!
 	</ion-card-title>
@@ -15,5 +15,6 @@
 <ion-tabs *ngIf="hasName">
 	<ion-tab [root]="tab1Root" tabTitle="Calcular IMC" tabIcon="calculator"></ion-tab>
 	<ion-tab [root]="tab2Root" tabTitle="Consultar IMC's" tabIcon="information-circle"></ion-tab>
-	<ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+	<ion-tab [root]="tab3Root" tabTitle="Pesquisar" tabIcon="contacts"></ion-tab>
+	<ion-tab [root]="tab4Root" tabTitle="Configuração" tabIcon="build"></ion-tab>
 </ion-tabs>

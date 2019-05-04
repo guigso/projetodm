@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 
 import { ListPage } from '../pages/list/list';
 import { SearchPage } from '../pages/search/search';
+import { ConfigPage } from '../pages/config/config';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -15,6 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ListPage,
     SearchPage,
     HomePage,
+    ConfigPage,
     TabsPage
   ],
   imports: [
@@ -27,6 +29,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ListPage,
     SearchPage,
     HomePage,
+    ConfigPage,
     TabsPage
   ],
   providers: [

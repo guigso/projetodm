@@ -1,17 +1,12 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+<ion-searchbar (ionInput)="getItems($event)">
+</ion-searchbar>
+<ion-list>
+	<ion-item *ngFor="let a of imcList">
+		<ion-col sm-size="6" md-size="6">
+			{{a.nome}}
+		</ion-col>
+		<ion-col sm-size="6" md-size="6">
+			{{a.imc | number:'2.1-2'}}
+		</ion-col>
+	</ion-item>
+</ion-list>
