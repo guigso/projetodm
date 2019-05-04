@@ -12,7 +12,7 @@
 		</ion-item>
 		<button ion-button (click)="confirmName()">Enviar</button>
 </ion-card>
-<ion-tabs *ngIf="hasName">
+<ion-tabs *ngIf="hasName" #myTabs>
 	<ion-tab [root]="tab1Root" tabTitle="Calcular IMC" tabIcon="calculator"></ion-tab>
 	<ion-tab [root]="tab2Root" tabTitle="Consultar IMC's" tabIcon="information-circle"></ion-tab>
 	<ion-tab [root]="tab3Root" tabTitle="Pesquisar" tabIcon="contacts"></ion-tab>

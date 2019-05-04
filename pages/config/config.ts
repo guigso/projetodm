@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Tabs } from 'ionic-angular';
 
 @Component({
   selector: 'page-config',
@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class ConfigPage {
   nome;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public tab: Tabs) {
 
   }
   ionViewDidEnter() {
@@ -15,6 +15,6 @@ export class ConfigPage {
   }
   confirmName() {
     localStorage.setItem('nome', this.nome);
-    
+    this.tab.select(0);
   }
 }
