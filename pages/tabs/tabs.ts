@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ListPage } from '../list/list';
-import { ContactPage } from '../contact/contact';
+import { SearchPage } from '../search/search';
 import { HomePage } from '../home/home';
 
 @Component({
@@ -11,7 +11,7 @@ export class TabsPage implements OnInit {
 
   tab1Root = HomePage;
   tab2Root = ListPage;
-  tab3Root = ContactPage;
+  tab3Root = SearchPage;
   hasName;
   nome;
   constructor() {
