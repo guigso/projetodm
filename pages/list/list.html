@@ -1,0 +1,36 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Lista de IMCS
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid>
+		<ion-list>
+			<ion-row no-padding >
+				<ion-col sm-size="6" md-size="6">
+					<ion-list-header> 
+						IMC
+					</ion-list-header>
+				</ion-col>
+				<ion-col sm-size="6" md-size="6">
+					<ion-list-header>
+						Data
+					</ion-list-header>
+				</ion-col>
+			</ion-row>
+			<ion-row no-padding>
+				<ion-item *ngFor="let a of imcList">
+					<ion-col sm-size="6" md-size="6">
+						{{a.imc}}
+					</ion-col>
+					<ion-col sm-size="6" md-size="6" >
+						{{a.data | date: 'hh:mm dd/MM/yyyy'}}
+					</ion-col>
+				</ion-item>
+			</ion-row>
+		</ion-list>
+	</ion-grid>
+</ion-content>

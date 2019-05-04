@@ -1,0 +1,53 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Calcular IMC</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h2>Calculadora de IMC On-line</h2>
+	<p>
+		Complete os campos abaixo e calcule seu IMC
+	</p>
+
+	<form [formGroup]="imcForm">
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<ion-item>
+						<ion-label>Nome</ion-label>
+						<ion-input formControlName="name" mode="md"></ion-input>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+
+					<ion-item>
+						<ion-label>Peso</ion-label>
+						<ion-input formControlName="weight" type="number" mode="md"></ion-input>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+
+			<ion-row>
+				<ion-col>
+					<ion-item>
+						<ion-label>Altura</ion-label>
+						<ion-input formControlName="height"  type="number" mode="md"></ion-input>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<button ion-button (click)="saveData()">Enviar dados</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h1>{{imc}}</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+	</form>
+</ion-content>
