@@ -9,6 +9,9 @@ import { ConfigPage } from '../pages/config/config';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { DemoMaterialModule } from './material-module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,10 @@ import { TabsPage } from '../pages/tabs/tabs';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    DemoMaterialModule,
+    BrowserAnimationsModule,
+
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,7 +40,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabsPage
   ],
   providers: [
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

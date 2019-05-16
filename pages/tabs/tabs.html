@@ -5,12 +5,18 @@
 	<ion-card-header>
 		Para prosseguir preencha as informações abaixo
 	</ion-card-header>
-		<ion-item>
+  <form [formGroup]="loginForm">
+		<mat-form-field appearance="outline">
 			<ion-label>Nome</ion-label>
-			<ion-input [(ngModel)]="nome">
+			<input matInput formControlName="nome"/>
+		</mat-form-field>
+		<ion-item>
+			<ion-label>Senha</ion-label>
+			<ion-input formControlName="senha">
 			</ion-input>
 		</ion-item>
 		<button ion-button (click)="confirmName()">Enviar</button>
+  </form>
 </ion-card>
 <ion-tabs *ngIf="hasName" #myTabs>
 	<ion-tab [root]="tab1Root" tabTitle="Calcular IMC" tabIcon="calculator"></ion-tab>
