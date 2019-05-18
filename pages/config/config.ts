@@ -17,4 +17,10 @@ export class ConfigPage {
     localStorage.setItem('nome', this.nome);
     this.tab.select(0);
   }
+  logout() {
+    localStorage.removeItem('nome');
+    window.location.reload();
+
+  }
 }
+
